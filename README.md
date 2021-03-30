@@ -16,7 +16,7 @@ mvn clean install
 
 Run :
 ```bash 
-mvn exec:java
+mvn spring-boot:run
 ```
 
 Test :
