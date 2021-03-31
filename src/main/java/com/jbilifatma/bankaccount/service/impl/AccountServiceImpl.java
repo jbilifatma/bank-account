@@ -50,11 +50,14 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public double getBalance(Account account) {
+        logger.info("Wait for calculate your balance...");
         return account.getOperations().stream().mapToDouble(Operation::getAmount).sum();
+
     }
 
     @Override
     public String getHistory(Account account) {
+        logger.info("Getting your account history...");
         return account.getOperations().stream().map(Operation::toString).collect(Collectors.joining(","));
     }
 
